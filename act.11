@@ -1,0 +1,30 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int correct_PIN = 1234;
+        int max_attempts = 3;
+        int attempt = 0;
+
+        while (attempt < max_attempts)
+        {
+            Console.Write("\nEnter PIN: ");
+            string user_input = Console.ReadLine();
+
+            if (int.TryParse(user_input, out int user_PIN))
+            {
+                if (user_PIN == correct_PIN)
+                {
+                    Console.WriteLine("Access granted");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect PIN. Attempts left: " + (max_attempts - attempt));
+                    attempt++;
+                }
+            }
+        }
+        Console.WriteLine("Access denied");
+    }
+}
