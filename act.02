@@ -1,0 +1,15 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter your age in years: ");
+        int age_in_years = Convert.ToInt32(Console.ReadLine());
+
+        double age_in_months = age_in_years * 12;
+
+        if (age_in_months >= 1 && age_in_years <= 120)
+        {
+            Console.WriteLine($"\nYou are {age_in_months} months old");
+        }
+    }
+}
