@@ -1,0 +1,61 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a sentence: ");
+        string sentence = Console.ReadLine();
+
+        int long_word = 0;
+        int count = 0;
+
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            if (sentence[i] != ' ')
+            {
+                count++;
+            }
+            else
+            {
+                if (count > long_word)
+                    long_word = count;
+
+                count = 0;
+            }
+        }
+        if (count > long_word)
+            long_word = count;
+
+        Console.WriteLine($"Longest word length: {long_word}");
+    }
+}
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a sentence: ");
+        string sentence = Console.ReadLine();
+
+        int longest_word = 0;
+        int count = 0;
+
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            if (sentence[i] != '')
+            {
+                count++;
+            }
+            else 
+            {
+                if (count > longest_word)
+                {
+                    longest_word = count;
+                    count = 0;
+                }
+            }
+            if (count > longest_word)
+                longest_word = count;
+
+            Console.WriteLine($"Longest word length: {longest_word}");
+        }
+    }
+}
