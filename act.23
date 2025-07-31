@@ -1,0 +1,19 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a sentence: ");
+        string sent = Console.ReadLine();
+
+        int Uppercase = 0;
+
+        foreach (char UpperCase in sent)
+        {
+            if (char.IsUpper(UpperCase))
+            {
+                Uppercase++;
+            }
+        }
+        Console.WriteLine($"The total uppercase letters: {Uppercase}");
+    }
+}
