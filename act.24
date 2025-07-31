@@ -1,0 +1,27 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string username = "admin";
+        string password = "1234";
+
+        while (true)
+        {
+            Console.Write("Enter a username: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter a password: ");
+            string pass = Console.ReadLine();
+
+            if (name == username && pass == password)
+            {
+                Console.WriteLine("Login successful");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Try again");
+            }
+        }
+    }
+}
