@@ -1,0 +1,21 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter price: ");
+        float price = float.Parse(Console.ReadLine());
+        Console.Write("Enter Quantity: ");
+        int quantity_purchased = Convert.ToInt32(Console.ReadLine());
+
+        float total_cost = price * quantity_purchased;
+
+        if (price <= 0 && quantity_purchased <= 0)
+        {
+            Console.WriteLine("Invalid Pricing. Please enter the right price.");
+        }
+        else
+        {
+            Console.WriteLine($"Total Cost: Php {total_cost}");
+        }
+    } 
+}
