@@ -1,0 +1,25 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a number: ");
+        string input = Console.ReadLine();
+        int num;
+
+        if (int.TryParse(input, out num))
+        {
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("Even number");
+            }
+            else
+            {
+                Console.WriteLine("Odd number");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid. Input must be an integer.");
+        }
+    }
+}
