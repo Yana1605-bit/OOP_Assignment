@@ -1,0 +1,16 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a word: ");
+        String name = Console.ReadLine();
+
+        String reverse = " ";
+
+        for (int i = name.Length - 1; i >= 0; i--)
+        {
+            reverse += name[i];
+        }
+        Console.Write("\n" + reverse);
+    }
+}
