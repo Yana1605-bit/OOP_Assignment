@@ -1,0 +1,22 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string word = "palindrome";
+        string input;
+
+        do
+        {
+            Console.Write("Enter the word palindrome: ");
+            input = Console.ReadLine();
+
+            if (input == word)
+            {
+                Console.WriteLine("Palindrome");
+                return;
+            }
+        }
+        while (input == word);
+        Console.WriteLine("Not a palindrome");
+    }
+}
