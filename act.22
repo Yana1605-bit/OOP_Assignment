@@ -1,0 +1,17 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter a word: ");
+        string word = Console.ReadLine();
+
+        Console.Write("Enter a position: ");
+        int position = int.Parse(Console.ReadLine());
+
+        if (position >= 0 && position <= word.Length)
+        {
+            char charc = word[position];
+            Console.Write($"\n{charc}");
+        }
+    }
+}
