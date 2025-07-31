@@ -1,0 +1,30 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("[1] Hello, user!  \n[2] Show current date   \n[3] Exiting");
+
+        Console.Write("\nChoose an integer from 1-3: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        
+        DateTime date = DateTime.Now;
+
+        string DateToday = date.ToString("dd-MM-yyyy");
+
+        switch (num)
+        {
+            case 1:
+                Console.WriteLine("Hello, user!");
+                break;
+            case 2:
+                Console.WriteLine("Show current date: " + DateToday);
+                break;
+            case 3:
+                Console.WriteLine("Exiting");
+                break;
+            default:
+                Console.WriteLine("\nInvalid options.");
+                break;
+        }
+    }
+}
