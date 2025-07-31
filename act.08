@@ -1,0 +1,18 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.Write("Enter an integer: ");
+        String integer = Console.ReadLine();
+
+            if (int.TryParse(integer, out int num))
+            {
+                int value = num + 10;
+                Console.WriteLine($"\nResult after adding 10: {value}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid. Input must be an integer.");
+            }
+     }
+}
