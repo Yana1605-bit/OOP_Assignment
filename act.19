@@ -1,0 +1,22 @@
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string secret_word = "open";
+        string input;
+
+        do
+        {
+            Console.Write("Guest the secret word: ");
+            input = Console.ReadLine();
+
+            if (input == secret_word)
+            {
+                Console.WriteLine("Correct!");
+                return;
+            }
+        }
+        while (input == secret_word);
+        Console.WriteLine("\nTry again");
+    }
+}
