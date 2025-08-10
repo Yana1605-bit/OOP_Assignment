@@ -1,9 +1,17 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity08
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Console.Write("Enter an integer: ");
-        String integer = Console.ReadLine();
+        private static void Main(string[] args)
+        {
+            Console.Write("Enter an integer: ");
+            String integer = Console.ReadLine();
 
             if (int.TryParse(integer, out int num))
             {
@@ -14,5 +22,6 @@ internal class Program
             {
                 Console.WriteLine("Invalid. Input must be an integer.");
             }
-     }
+         }
+    }
 }
