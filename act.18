@@ -1,14 +1,23 @@
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        Console.Write("Enter a number: ");
-        int num = Convert.ToInt32(Console.ReadLine());
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        while (num >= 0)
+namespace Activity18
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
-            Console.WriteLine(num);
-            num--;
+            Console.Write("Enter a number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            while (num >= 0)
+            {
+                Console.WriteLine(num);
+                num--;
+            }
         }
     }
 }
