@@ -1,25 +1,34 @@
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        Console.Write("Enter a number: ");
-        string input = Console.ReadLine();
-        int num;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        if (int.TryParse(input, out num))
+namespace Activity12
+{    
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
-            if (num % 2 == 0)
+            Console.Write("Enter a number: ");
+            string input = Console.ReadLine();
+            int num;
+
+            if (int.TryParse(input, out num))
             {
-                Console.WriteLine("Even number");
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine("Even number");
+                }
+                else
+                {
+                    Console.WriteLine("Odd number");
+                }
             }
             else
             {
-                Console.WriteLine("Odd number");
+                Console.WriteLine("Invalid. Input must be an integer.");
             }
-        }
-        else
-        {
-            Console.WriteLine("Invalid. Input must be an integer.");
         }
     }
 }
