@@ -1,35 +1,45 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity20
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Console.Write("Enter a password: ");
-        string pass = Console.ReadLine();
-
-        bool Upper_Case = false;
-        bool num = false;
-
-        foreach (char ch in pass)
+        private static void Main(string[] args)
         {
-            if (char.IsUpper(ch))
-                Upper_Case = true;
-            if (char.IsDigit(c))
-                num = true;
-        }
-        bool aLength = pass.Length >= 8;
+            Console.Write("Enter a password: ");
+            string pass = Console.ReadLine();
 
-        if (aLength && Upper_Case && num)
-        {
-            Console.WriteLine("Valid password");
-        }
-        else
-        {
-            Console.WriteLine("Invalid password.");
-            if (!Upper_Case)
-                Console.WriteLine("Error! it must contain at least one uppercase letter.");
-            if (!num)
-                Console.WriteLine("Error! it must include at least one number.");
-            if (!aLength)
-                Console.WriteLine("Error! it must be at least 8 characters long.");
+            bool Upper_Case = false;
+            bool num = false;
+
+            foreach (char ch in pass)
+            {
+                if (char.IsUpper(ch))
+                    Upper_Case = true;
+                if (char.IsDigit(c))
+                    num = true;
+            }
+            bool aLength = pass.Length >= 8;
+
+            if (aLength && Upper_Case && num)
+            {
+                Console.WriteLine("Valid password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid password.");
+
+                if (!Upper_Case)
+                    Console.WriteLine("Error! it must contain at least one uppercase letter.");
+                if (!num)
+                    Console.WriteLine("Error! it must include at least one number.");
+                if (!aLength)
+                    Console.WriteLine("Error! it must be at least 8 characters long.");
+            }
         }
     }
 }
