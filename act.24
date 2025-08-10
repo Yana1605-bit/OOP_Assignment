@@ -1,28 +1,37 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity24
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        string username = "admin";
-        string password = "1234";
-
-        while (true)
+        private static void Main(string[] args)
         {
-            Console.Write("Enter a username: ");
-            string name = Console.ReadLine();
+            string username = "admin";
+            string password = "1234";
 
-            Console.Write("Enter a password: ");
-            string pass = Console.ReadLine();
+            while (true)
+            {
+                Console.Write("Enter a username: ");
+                string name = Console.ReadLine();
 
-            if (name == username && pass == password)
-            {
-                Console.WriteLine("Login successful");
-                return;
+                Console.Write("Enter a password: ");
+                string pass = Console.ReadLine();
+
+                if (name == username && pass == password)
+                {
+                    Console.WriteLine("Login successful");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Try again");
+                }
+                Console.WriteLine();
             }
-            else
-            {
-                Console.WriteLine("Try again");
-            }
-            Console.WriteLine();
         }
     }
 }
