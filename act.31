@@ -18,7 +18,7 @@ namespace trylang
 
             while (right > left)
             {
-                if (word[left] != word[right])
+                if (word[right] != word[left])
                 {
                     Console.WriteLine($"Is not a palindrome");
                     return;
