@@ -1,22 +1,32 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace trylang
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        string word = "palindrome";
-        string input;
-
-        do
+        static void Main(string[] args)
         {
-            Console.Write("Enter the word palindrome: ");
-            input = Console.ReadLine();
+            Console.Write("Enter a word: ");
+            string word = Console.ReadLine();
 
-            if (input == word)
+            int right = word.Length - 1;
+            int left = 0;
+
+            while (right > left)
             {
-                Console.WriteLine("Palindrome");
-                return;
+                if (word[left] != word[right])
+                {
+                    Console.WriteLine($"Is not a palindrome");
+                    return;
+                }
+                left++;
+                right--;
             }
+            Console.WriteLine($"It is a palindrome");
         }
-        while (input == word);
-        Console.WriteLine("Not a palindrome");
     }
 }
