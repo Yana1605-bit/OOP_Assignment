@@ -1,16 +1,25 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity28
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Console.Write("Enter a word: ");
-        String name = Console.ReadLine();
-
-        String reverse = " ";
-
-        for (int i = name.Length - 1; i >= 0; i--)
+        private static void Main(string[] args)
         {
-            reverse += name[i];
+            Console.Write("Enter a word: ");
+            String name = Console.ReadLine();
+
+            String reverse = " ";
+
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                reverse += name[i];
+            }
+            Console.Write("\n" + reverse);
         }
-        Console.Write("\n" + reverse);
     }
 }
