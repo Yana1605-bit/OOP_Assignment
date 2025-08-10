@@ -1,19 +1,28 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity23
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Console.Write("Enter a sentence: ");
-        string sent = Console.ReadLine();
-
-        int Uppercase = 0;
-
-        foreach (char UpperCase in sent)
+        private static void Main(string[] args)
         {
-            if (char.IsUpper(UpperCase))
+            Console.Write("Enter a sentence: ");
+            string sent = Console.ReadLine();
+
+            int Uppercase = 0;
+
+            foreach (char UpperCase in sent)
             {
-                Uppercase++;
+                if (char.IsUpper(UpperCase))
+                {
+                    Uppercase++;
+                }
             }
+            Console.WriteLine($"The total uppercase letters: {Uppercase}");
         }
-        Console.WriteLine($"The total uppercase letters: {Uppercase}");
     }
 }
