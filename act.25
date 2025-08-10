@@ -1,28 +1,37 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity25
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        int sum = 0;
-
-        while (true)
+        private static void Main(string[] args)
         {
-            Console.Write("Enter a number or stop: ");
-            string input = Console.ReadLine();
+            int sum = 0;
 
-            if (input.Equals("stop"))
+            while (true)
             {
-                break;
+                Console.Write("Enter a number or stop: ");
+                string input = Console.ReadLine();
+
+                if (input.Equals("stop"))
+                {
+                    break;
+                }
+                if (int.TryParse(input, out int total_num))
+                {
+                    sum += total_num;
+                    Console.WriteLine($"{total_num}");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number or 'stop'.");
+                }
             }
-            if (int.TryParse(input, out int total_num))
-            {
-                sum += total_num;
-                Console.WriteLine($"{total_num}");
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a valid number or 'stop'.");
-            }
+            Console.WriteLine($"\n{sum}");
         }
-        Console.WriteLine($"\n{sum}");
     }
 }
