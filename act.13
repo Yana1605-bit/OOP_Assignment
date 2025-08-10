@@ -1,18 +1,27 @@
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        Console.Write("Enter name: ");
-        string name = Console.ReadLine();
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        if (!string.IsNullOrEmpty(name)) 
-        { 
-            string capitalized = char.ToUpper (name[0]) + name.Substring (1).ToLower ();
-            Console.WriteLine($"\n{capitalized}");
-        }
-        else
+namespace Activity13
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Invalid input.");
+            Console.Write("Enter name: ");
+            string name = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(name)) 
+            { 
+                string capitalized = char.ToUpper (name[0]) + name.Substring (1).ToLower ();
+                Console.WriteLine($"\n{capitalized}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
         }
     }
 }
