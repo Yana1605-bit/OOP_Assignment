@@ -1,20 +1,29 @@
-internal class Program
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Activity01
 {
-    private static void Main(string[] args)
+    internal class program
     {
-        Console.WriteLine("Hello, World!") Console.Write("Enter your first name: ");
-        string first_name = Console.ReadLine();
+        private static void Main(string[] args)
+        {    
+            Console.WriteLine("Hello, World!") Console.Write("Enter your first name: ");
+            string first_name = Console.ReadLine();
 
-        Console.Write("Enter your last name: ");
-        string last_name = Console.ReadLine();
+            Console.Write("Enter your last name: ");
+            string last_name = Console.ReadLine();
 
-        if (!string.IsNullOrWhiteSpace(first_name) || !string.IsNullOrWhiteSpace(last_name))
-        {
-            Console.WriteLine($"\nYour full name is: {first_name} {last_name}.");
-        }
-        else
-        {
-            Console.WriteLine("Invalid input.");
+            if (!string.IsNullOrWhiteSpace(first_name) || !string.IsNullOrWhiteSpace(last_name))
+            {
+                Console.WriteLine($"\nYour full name is: {first_name} {last_name}.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
         }
     }
 }
